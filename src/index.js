@@ -64,6 +64,12 @@ const element = <h1>{title}</h1>;*/
 ReactDOM.render(element, document.getElementById('root'));
 registerServiceWorker();*/
 
+/*
+React elements are immutable. Once you create an element, you can't change
+ its children or attributes. An element is like a single frame in a movie:
+ it represents the UI at a certain point in time.
+
+ SHOW HOUR LOCAL,UPDATE 1 SECOND
 
 function tick() {
   const element = (
@@ -79,3 +85,26 @@ function tick() {
 }
 
 setInterval(tick, 1000);
+*/
+
+/*
+call function and render in App2
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App2() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  <App2 />,
+  document.getElementById('root')
+);*/
