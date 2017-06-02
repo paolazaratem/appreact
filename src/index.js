@@ -47,9 +47,35 @@ function getGreeting(user) {
 );*/
 
 //JSX Prevents Injection Attacks
-//const title = response.potentiallyMaliciousInput;
+/*const title = response.potentiallyMaliciousInput;
 // This is safe:
-//const element = <h1>{title}</h1>;
+const element = <h1>{title}</h1>;*/
+
+/*React.createElement() performs a few checks to help you write bug-free
+ code but essentially it creates an object like this:
+ React elements are immutable.
+ */
+/*const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, peace!'
+);
 
 ReactDOM.render(element, document.getElementById('root'));
-registerServiceWorker();
+registerServiceWorker();*/
+
+
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+}
+
+setInterval(tick, 1000);
